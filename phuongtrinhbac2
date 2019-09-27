@@ -1,0 +1,30 @@
+require 'cmath'
+puts "Phuong trinh bac 2 co dang ax^2 + bx + c = 0"
+puts "nhap a:"
+puts a =gets.to_f
+puts "nhap b:"
+puts b=gets.to_f
+puts "nhap c:"
+puts c=gets.to_f
+delta =b*b-4*a*c
+if a==0
+if b==0
+if c==0
+puts "phuong trinh vo so nghiem"
+else
+puts "phuong trinh vo nghiem" 
+end
+else
+puts "phuong trinh co nghiem duy nhat la:#{-c/b}"
+end
+else
+if delta<0
+puts "phuong trinh vo nghiem!!"
+end
+if delta==0
+puts "phuong trinh co nghiem kep la:#{-b/2*a}"
+end
+if delta>0
+puts "phuong trinh co 2 nghiem phan biet la:#{(-b+CMath.sqrt(delta))/(2*a)},#{(-b-CMath.sqrt(delta))/(2*a)}"
+end
+end
